@@ -39,7 +39,7 @@ onMounted(async () => {
   )
 
   representatives.value.forEach(
-    (representative) =>
+    (representative: any) =>
       (representative.metrics = metricsDistricts.find((metricsDistrict) => {
         return (
           metricsDistrict.district ===
@@ -48,7 +48,7 @@ onMounted(async () => {
       }))
   )
 
-  representatives.value.sort((a, b) => {
+  representatives.value.sort((a: any, b: any) => {
     return a.terms[a.terms.length - 1].district - b.terms[b.terms.length - 1].district
   })
 

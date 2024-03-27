@@ -1,0 +1,37 @@
+[
+  {
+    "state": "CT",
+    "district": 1,
+    "enrolledHouseholds": 48649,
+    "percentHouseholds": 0.17,
+    "funding": 25879713
+  },
+  {
+    "state": "CT",
+    "district": 2,
+    "enrolledHouseholds": 31261,
+    "percentHouseholds": 0.11,
+    "funding": 16114038
+  },
+  {
+    "state": "CT",
+    "district": 3,
+    "enrolledHouseholds": 37510,
+    "percentHouseholds": 0.13,
+    "funding": 20266016
+  },
+  {
+    "state": "CT",
+    "district": 4,
+    "enrolledHouseholds": 24896,
+    "percentHouseholds": 0.09,
+    "funding": 12641760
+  },
+  {
+    "state": "CT",
+    "district": 5,
+    "enrolledHouseholds": 39232,
+    "percentHouseholds": 0.13,
+    "funding": 21009799
+  }
+]

@@ -1,0 +1,366 @@
+[
+  {
+    "state": "CA",
+    "district": 1,
+    "enrolledHouseholds": 57592,
+    "percentHouseholds": 0.2,
+    "funding": 28864317
+  },
+  {
+    "state": "CA",
+    "district": 2,
+    "enrolledHouseholds": 26124,
+    "percentHouseholds": 0.09,
+    "funding": 12029412
+  },
+  {
+    "state": "CA",
+    "district": 3,
+    "enrolledHouseholds": 19889,
+    "percentHouseholds": 0.07,
+    "funding": 9186705
+  },
+  {
+    "state": "CA",
+    "district": 4,
+    "enrolledHouseholds": 25743,
+    "percentHouseholds": 0.09,
+    "funding": 12732246
+  },
+  {
+    "state": "CA",
+    "district": 5,
+    "enrolledHouseholds": 36746,
+    "percentHouseholds": 0.13,
+    "funding": 17340865
+  },
+  {
+    "state": "CA",
+    "district": 6,
+    "enrolledHouseholds": 50442,
+    "percentHouseholds": 0.17,
+    "funding": 26654508
+  },
+  {
+    "state": "CA",
+    "district": 7,
+    "enrolledHouseholds": 47215,
+    "percentHouseholds": 0.16,
+    "funding": 24593575
+  },
+  {
+    "state": "CA",
+    "district": 8,
+    "enrolledHouseholds": 38274,
+    "percentHouseholds": 0.13,
+    "funding": 17896061
+  },
+  {
+    "state": "CA",
+    "district": 9,
+    "enrolledHouseholds": 45472,
+    "percentHouseholds": 0.16,
+    "funding": 24725198
+  },
+  {
+    "state": "CA",
+    "district": 10,
+    "enrolledHouseholds": 14466,
+    "percentHouseholds": 0.05,
+    "funding": 6693485
+  },
+  {
+    "state": "CA",
+    "district": 11,
+    "enrolledHouseholds": 38796,
+    "percentHouseholds": 0.13,
+    "funding": 18554376
+  },
+  {
+    "state": "CA",
+    "district": 12,
+    "enrolledHouseholds": 39686,
+    "percentHouseholds": 0.14,
+    "funding": 18892566
+  },
+  {
+    "state": "CA",
+    "district": 13,
+    "enrolledHouseholds": 60792,
+    "percentHouseholds": 0.21,
+    "funding": 31489423
+  },
+  {
+    "state": "CA",
+    "district": 14,
+    "enrolledHouseholds": 21881,
+    "percentHouseholds": 0.07,
+    "funding": 10269455
+  },
+  {
+    "state": "CA",
+    "district": 15,
+    "enrolledHouseholds": 19089,
+    "percentHouseholds": 0.07,
+    "funding": 8939027
+  },
+  {
+    "state": "CA",
+    "district": 16,
+    "enrolledHouseholds": 16268,
+    "percentHouseholds": 0.06,
+    "funding": 8507845
+  },
+  {
+    "state": "CA",
+    "district": 17,
+    "enrolledHouseholds": 17140,
+    "percentHouseholds": 0.06,
+    "funding": 8416671
+  },
+  {
+    "state": "CA",
+    "district": 18,
+    "enrolledHouseholds": 40499,
+    "percentHouseholds": 0.14,
+    "funding": 20367375
+  },
+  {
+    "state": "CA",
+    "district": 19,
+    "enrolledHouseholds": 22480,
+    "percentHouseholds": 0.08,
+    "funding": 11111913
+  },
+  {
+    "state": "CA",
+    "district": 20,
+    "enrolledHouseholds": 53051,
+    "percentHouseholds": 0.18,
+    "funding": 26006112
+  },
+  {
+    "state": "CA",
+    "district": 21,
+    "enrolledHouseholds": 84518,
+    "percentHouseholds": 0.29,
+    "funding": 44430902
+  },
+  {
+    "state": "CA",
+    "district": 22,
+    "enrolledHouseholds": 103807,
+    "percentHouseholds": 0.35,
+    "funding": 54544566
+  },
+  {
+    "state": "CA",
+    "district": 23,
+    "enrolledHouseholds": 88415,
+    "percentHouseholds": 0.3,
+    "funding": 43338642
+  },
+  {
+    "state": "CA",
+    "district": 24,
+    "enrolledHouseholds": 37392,
+    "percentHouseholds": 0.13,
+    "funding": 18540804
+  },
+  {
+    "state": "CA",
+    "district": 25,
+    "enrolledHouseholds": 107592,
+    "percentHouseholds": 0.37,
+    "funding": 53982649
+  },
+  {
+    "state": "CA",
+    "district": 26,
+    "enrolledHouseholds": 39318,
+    "percentHouseholds": 0.13,
+    "funding": 19517777
+  },
+  {
+    "state": "CA",
+    "district": 27,
+    "enrolledHouseholds": 67076,
+    "percentHouseholds": 0.23,
+    "funding": 35374764
+  },
+  {
+    "state": "CA",
+    "district": 28,
+    "enrolledHouseholds": 46596,
+    "percentHouseholds": 0.16,
+    "funding": 21205772
+  },
+  {
+    "state": "CA",
+    "district": 29,
+    "enrolledHouseholds": 87411,
+    "percentHouseholds": 0.3,
+    "funding": 42639510
+  },
+  {
+    "state": "CA",
+    "district": 30,
+    "enrolledHouseholds": 60112,
+    "percentHouseholds": 0.21,
+    "funding": 30331040
+  },
+  {
+    "state": "CA",
+    "district": 31,
+    "enrolledHouseholds": 78308,
+    "percentHouseholds": 0.27,
+    "funding": 32858077
+  },
+  {
+    "state": "CA",
+    "district": 32,
+    "enrolledHouseholds": 41774,
+    "percentHouseholds": 0.14,
+    "funding": 20630308
+  },
+  {
+    "state": "CA",
+    "district": 33,
+    "enrolledHouseholds": 95701,
+    "percentHouseholds": 0.33,
+    "funding": 45242978
+  },
+  {
+    "state": "CA",
+    "district": 34,
+    "enrolledHouseholds": 95673,
+    "percentHouseholds": 0.33,
+    "funding": 49805440
+  },
+  {
+    "state": "CA",
+    "district": 35,
+    "enrolledHouseholds": 72594,
+    "percentHouseholds": 0.25,
+    "funding": 33066455
+  },
+  {
+    "state": "CA",
+    "district": 36,
+    "enrolledHouseholds": 26901,
+    "percentHouseholds": 0.09,
+    "funding": 12608089
+  },
+  {
+    "state": "CA",
+    "district": 37,
+    "enrolledHouseholds": 102359,
+    "percentHouseholds": 0.35,
+    "funding": 53001008
+  },
+  {
+    "state": "CA",
+    "district": 38,
+    "enrolledHouseholds": 53255,
+    "percentHouseholds": 0.18,
+    "funding": 26278926
+  },
+  {
+    "state": "CA",
+    "district": 39,
+    "enrolledHouseholds": 78849,
+    "percentHouseholds": 0.27,
+    "funding": 35846634
+  },
+  {
+    "state": "CA",
+    "district": 40,
+    "enrolledHouseholds": 25953,
+    "percentHouseholds": 0.09,
+    "funding": 11924233
+  },
+  {
+    "state": "CA",
+    "district": 41,
+    "enrolledHouseholds": 49512,
+    "percentHouseholds": 0.17,
+    "funding": 22482211
+  },
+  {
+    "state": "CA",
+    "district": 42,
+    "enrolledHouseholds": 82946,
+    "percentHouseholds": 0.28,
+    "funding": 42298892
+  },
+  {
+    "state": "CA",
+    "district": 43,
+    "enrolledHouseholds": 99168,
+    "percentHouseholds": 0.34,
+    "funding": 52528858
+  },
+  {
+    "state": "CA",
+    "district": 44,
+    "enrolledHouseholds": 72606,
+    "percentHouseholds": 0.25,
+    "funding": 37979444
+  },
+  {
+    "state": "CA",
+    "district": 45,
+    "enrolledHouseholds": 57689,
+    "percentHouseholds": 0.2,
+    "funding": 27445087
+  },
+  {
+    "state": "CA",
+    "district": 46,
+    "enrolledHouseholds": 76421,
+    "percentHouseholds": 0.26,
+    "funding": 37595829
+  },
+  {
+    "state": "CA",
+    "district": 47,
+    "enrolledHouseholds": 29563,
+    "percentHouseholds": 0.1,
+    "funding": 13904020
+  },
+  {
+    "state": "CA",
+    "district": 48,
+    "enrolledHouseholds": 40503,
+    "percentHouseholds": 0.14,
+    "funding": 17285219
+  },
+  {
+    "state": "CA",
+    "district": 49,
+    "enrolledHouseholds": 32792,
+    "percentHouseholds": 0.11,
+    "funding": 13683538
+  },
+  {
+    "state": "CA",
+    "district": 50,
+    "enrolledHouseholds": 40548,
+    "percentHouseholds": 0.14,
+    "funding": 18100556
+  },
+  {
+    "state": "CA",
+    "district": 51,
+    "enrolledHouseholds": 52918,
+    "percentHouseholds": 0.18,
+    "funding": 24533732
+  },
+  {
+    "state": "CA",
+    "district": 52,
+    "enrolledHouseholds": 78783,
+    "percentHouseholds": 0.27,
+    "funding": 37594656
+  }
+]

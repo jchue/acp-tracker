@@ -1,0 +1,51 @@
+[
+  {
+    "state": "AL",
+    "district": 1,
+    "enrolledHouseholds": 46240,
+    "percentHouseholds": 0.16,
+    "funding": 24827003
+  },
+  {
+    "state": "AL",
+    "district": 2,
+    "enrolledHouseholds": 68263,
+    "percentHouseholds": 0.23,
+    "funding": 37976447
+  },
+  {
+    "state": "AL",
+    "district": 3,
+    "enrolledHouseholds": 61440,
+    "percentHouseholds": 0.21,
+    "funding": 32224459
+  },
+  {
+    "state": "AL",
+    "district": 4,
+    "enrolledHouseholds": 58504,
+    "percentHouseholds": 0.2,
+    "funding": 30259514
+  },
+  {
+    "state": "AL",
+    "district": 5,
+    "enrolledHouseholds": 36363,
+    "percentHouseholds": 0.12,
+    "funding": 18904860
+  },
+  {
+    "state": "AL",
+    "district": 6,
+    "enrolledHouseholds": 38661,
+    "percentHouseholds": 0.13,
+    "funding": 19705011
+  },
+  {
+    "state": "AL",
+    "district": 7,
+    "enrolledHouseholds": 97155,
+    "percentHouseholds": 0.33,
+    "funding": 53539662
+  }
+]

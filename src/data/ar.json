@@ -1,0 +1,30 @@
+[
+  {
+    "state": "AR",
+    "district": 1,
+    "enrolledHouseholds": 57812,
+    "percentHouseholds": 0.2,
+    "funding": "AR"
+  },
+  {
+    "state": "AR",
+    "district": 2,
+    "enrolledHouseholds": 44548,
+    "percentHouseholds": 0.15,
+    "funding": "AR"
+  },
+  {
+    "state": "AR",
+    "district": 3,
+    "enrolledHouseholds": 51971,
+    "percentHouseholds": 0.18,
+    "funding": "AR"
+  },
+  {
+    "state": "AR",
+    "district": 4,
+    "enrolledHouseholds": 55984,
+    "percentHouseholds": 0.19,
+    "funding": "AR"
+  }
+]

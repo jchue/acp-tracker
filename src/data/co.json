@@ -1,0 +1,58 @@
+[
+  {
+    "state": "CO",
+    "district": 1,
+    "enrolledHouseholds": 44347,
+    "percentHouseholds": 0.15,
+    "funding": 21899463
+  },
+  {
+    "state": "CO",
+    "district": 2,
+    "enrolledHouseholds": 16185,
+    "percentHouseholds": 0.06,
+    "funding": 7981623
+  },
+  {
+    "state": "CO",
+    "district": 3,
+    "enrolledHouseholds": 50201,
+    "percentHouseholds": 0.17,
+    "funding": 26699314
+  },
+  {
+    "state": "CO",
+    "district": 4,
+    "enrolledHouseholds": 17009,
+    "percentHouseholds": 0.06,
+    "funding": 8018744
+  },
+  {
+    "state": "CO",
+    "district": 5,
+    "enrolledHouseholds": 29983,
+    "percentHouseholds": 0.1,
+    "funding": 15766119
+  },
+  {
+    "state": "CO",
+    "district": 6,
+    "enrolledHouseholds": 29809,
+    "percentHouseholds": 0.1,
+    "funding": 14343195
+  },
+  {
+    "state": "CO",
+    "district": 7,
+    "enrolledHouseholds": 23658,
+    "percentHouseholds": 0.08,
+    "funding": 11541047
+  },
+  {
+    "state": "CO",
+    "district": 8,
+    "enrolledHouseholds": 30727,
+    "percentHouseholds": 0.1,
+    "funding": 14618058
+  }
+]

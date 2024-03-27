@@ -1,0 +1,65 @@
+[
+  {
+    "state": "AZ",
+    "district": 1,
+    "enrolledHouseholds": 39342,
+    "percentHouseholds": 0.13,
+    "funding": 18010548
+  },
+  {
+    "state": "AZ",
+    "district": 2,
+    "enrolledHouseholds": 58979,
+    "percentHouseholds": 0.2,
+    "funding": 63414786
+  },
+  {
+    "state": "AZ",
+    "district": 3,
+    "enrolledHouseholds": 92311,
+    "percentHouseholds": 0.32,
+    "funding": 49051411
+  },
+  {
+    "state": "AZ",
+    "district": 4,
+    "enrolledHouseholds": 53283,
+    "percentHouseholds": 0.18,
+    "funding": 25199585
+  },
+  {
+    "state": "AZ",
+    "district": 5,
+    "enrolledHouseholds": 23958,
+    "percentHouseholds": 0.08,
+    "funding": 10089156
+  },
+  {
+    "state": "AZ",
+    "district": 6,
+    "enrolledHouseholds": 49404,
+    "percentHouseholds": 0.17,
+    "funding": 23759489
+  },
+  {
+    "state": "AZ",
+    "district": 7,
+    "enrolledHouseholds": 103006,
+    "percentHouseholds": 0.35,
+    "funding": 55238199
+  },
+  {
+    "state": "AZ",
+    "district": 8,
+    "enrolledHouseholds": 50374,
+    "percentHouseholds": 0.17,
+    "funding": 23756599
+  },
+  {
+    "state": "AZ",
+    "district": 9,
+    "enrolledHouseholds": 47846,
+    "percentHouseholds": 0.16,
+    "funding": 22940596
+  }
+]

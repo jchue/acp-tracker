@@ -1,8 +1,4 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
-import { useRoute } from 'vue-router'
-import { State } from '@/components/states'
-
 const route = useRoute()
 
 const abbr = route.params.state as string
@@ -24,8 +20,8 @@ interface Metrics {
 }
 
 onMounted(async () => {
-  const metricsDistricts: Metrics[] = (await import(`../data/${route.params.state}.json`)).default
-  const legislators = (await import('../data/legislators.json')).default
+  const metricsDistricts: Metrics[] = (await import(`~/data/${route.params.state}.json`)).default
+  const legislators = (await import('~/data/legislators.json')).default
 
   households.value = metricsDistricts.reduce(
     (total: number, district: Metrics): number => total + district.enrolledHouseholds,

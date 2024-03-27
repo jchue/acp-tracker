@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { State } from '@/components/states'
+import { State } from '~/utils/states'
 
 const states = Object.entries(State)
 </script>

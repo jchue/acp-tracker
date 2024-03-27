@@ -1,5 +1,9 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
+import '~/assets/main.css'
+
+useHead({
+  title: 'ACP Tracker',
+})
 </script>
 
 <template>
@@ -15,7 +19,7 @@ import { RouterLink, RouterView } from 'vue-router'
   </header>
 
   <main>
-    <RouterView />
+    <NuxtPage />
   </main>
 </template>
 

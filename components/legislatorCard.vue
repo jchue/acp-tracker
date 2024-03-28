@@ -35,20 +35,20 @@ instagram.value = socialPerson?.social.instagram
 <template>
   <h1>{{ name }}</h1>
 
-  <section class="offices">
+  <section class="flex gap-8 mb-4">
     <div>
-      <span class="label">DC Office</span>
-      <address>
+      <span class="block font-bold font-mono mb-4 text-sm uppercase">DC Office</span>
+      <address class="not-italic text-sm">
         {{ dcOffice }}<br />
         {{ dcPhone }}
       </address>
     </div>
 
     <div>
-      <span class="label">District Offices</span>
-      <ul>
+      <span class="block font-bold font-mono mb-4 text-sm uppercase">District Offices</span>
+      <ul class="flex flex-col gap-4">
         <li v-for="districtOffice in districtOffices" v-bind:key="districtOffice.id">
-          <address>
+          <address class="not-italic text-sm">
             {{ districtOffice.address
             }}<span v-if="districtOffice.suite">, {{ districtOffice.suite }}</span
             ><br />
@@ -60,9 +60,9 @@ instagram.value = socialPerson?.social.instagram
     </div>
   </section>
 
-  <section class="online">
-    <span class="label">Online</span>
-    <ul>
+  <section>
+    <span class="block font-bold font-mono mb-4 text-sm uppercase">Online</span>
+    <ul class="flex gap-4">
       <li><a v-bind:href="website" target="_blank">Website</a></li>
       <li v-if="facebook">
         <a v-bind:href="`https://facebook.com/${facebook}`" target="_blank">Facebook</a>
@@ -76,43 +76,3 @@ instagram.value = socialPerson?.social.instagram
     </ul>
   </section>
 </template>
-
-<style scoped>
-address {
-  font-size: 0.875rem;
-  font-style: normal;
-}
-
-.label {
-  display: block;
-  font-family: monospace;
-  font-size: 0.875rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-  text-transform: uppercase;
-}
-
-.offices {
-  display: flex;
-  gap: 2rem;
-  margin-bottom: 1rem;
-}
-
-.offices li,
-.online li {
-  list-style-type: none;
-}
-
-.offices ul {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  padding-left: 0;
-}
-
-.online ul {
-  display: flex;
-  gap: 1rem;
-  padding-left: 0;
-}
-</style>

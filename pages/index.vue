@@ -5,20 +5,20 @@ const states = Object.entries(State)
 </script>
 
 <template>
-  <section class="hero">
-    <div class="wrapper">
-      <p><em>22.8 million households</em> will lose access to affordable internet in May 2024</p>
+  <section class="bg-primary flex flex-col font-bold h-screen leading-tight -mt-8 py-16 text-6xl text-white">
+    <div class="wrapper flex flex-col gap-8">
+      <p><em class="block not-italic text-8xl">22.8 million households</em> will lose access to affordable internet in May 2024</p>
 
-      <div class="cta">
+      <div class="flex gap-4 items-center">
         <RouterLink to="/about" class="button primary">Why?</RouterLink>
         <a href="#states" class="button secondary">How many in each state?</a>
       </div>
     </div>
   </section>
-  <section id="states" class="wrapper">
+  <section class="wrapper py-16" id="states">
     <p>See the breakdown by state:</p>
 
-    <ul class="states">
+    <ul class="columns-3">
       <li v-for="state in states" v-bind:key="state[0]">
         <RouterLink v-bind:to="`/${state[0]}`">{{ state[1] }}</RouterLink>
       </li>
@@ -27,37 +27,6 @@ const states = Object.entries(State)
 </template>
 
 <style scoped>
-.hero {
-  background-color: var(--color-accent);
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  font-size: 4rem;
-  font-weight: bold;
-  height: 100vh;
-  line-height: 1.25;
-  margin-top: -2rem;
-  padding: 4rem 0;
-}
-
-.hero .wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
-em {
-  display: block;
-  font-size: 6rem;
-  font-style: normal;
-}
-
-.cta {
-  align-items: center;
-  display: flex;
-  gap: 1rem;
-}
-
 .button {
   border: 3px solid;
   border-radius: 0.5rem;
@@ -84,14 +53,5 @@ em {
   background-color: transparent;
   border-color: #fff;
   color: #fff;
-}
-
-section#states {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-}
-
-ul.states {
-  columns: 3 auto;
 }
 </style>

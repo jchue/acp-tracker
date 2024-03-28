@@ -7,56 +7,23 @@ useSeoMeta({
 </script>
 
 <template>
-  <header>
-    <div class="wrapper">
-      <RouterLink to="/" class="site-name">ACP Tracker</RouterLink>
+  <header class="bg-white py-4 shadow-lg sticky top-0 z-10">
+    <div class="wrapper flex items-center">
+      <RouterLink to="/" class="hover:bg-transparent border-r border-black font-bold mr-8 pr-8 text-black hover:text-black">ACP Tracker</RouterLink>
 
-      <nav>
+      <nav class="flex items-center gap-2">
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
       </nav>
     </div>
   </header>
 
-  <main>
+  <main class="py-8">
     <NuxtPage />
   </main>
 </template>
 
 <style scoped>
-header {
-  background-color: #fff;
-  box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.05);
-  line-height: 1.5;
-  padding: 1rem 0;
-  position: sticky;
-  top: 0;
-  z-index: 1;
-}
-
-header > div {
-  align-items: center;
-  display: flex;
-}
-
-.site-name {
-  border-right: 1px solid #000;
-  color: #000;
-  font-weight: bold;
-  margin-right: 2rem;
-  padding-right: 2rem;
-}
-
-.site-name:hover {
-  background-color: transparent
-}
-
-nav {
-  align-items: center;
-  display: flex;
-  gap: 0.5rem;
-}
-
 nav a {
   border: 2px solid transparent;
   color: #000;
@@ -76,9 +43,5 @@ nav a.router-link-exact-active {
 
 nav a.router-link-exact-active:hover {
   background-color: transparent;
-}
-
-main {
-  padding: 2rem 0;
 }
 </style>

@@ -24,14 +24,15 @@ ul {
 a {
   text-decoration: none;
   color: var(--color-accent);
-  transition: 0.25s;
 }
 
 a:hover {
-  opacity: 0.5;
+  background-color: var(--color-accent);
+  color: #fff;
 }
 
 .wrapper {
   margin: auto;
   max-width: 1280px;
+  padding: 0 1rem;
 }

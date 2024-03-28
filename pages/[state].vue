@@ -7,6 +7,12 @@ const representatives = ref<any>([])
 const senators = ref<any>([])
 const households = ref(0)
 
+const visibleLegislatorContact = ref()
+
+useSeoMeta({
+  title: `${name} At-Risk Households`
+})
+
 function numberWithCommas(number: number) {
   return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
 }
@@ -58,11 +64,15 @@ onMounted(async () => {
     /* empty */
   }
 })
+
+function openContact(id: number | string) {
+  visibleLegislatorContact.value = id
+}
 </script>
 
 <template>
-  <div class="wrapper">
-    <header>
+  <header>
+    <div class="wrapper">
       <img
         v-bind:src="`https://flags.ox3.in/svg/us/${abbr}.svg`"
         v-bind:alt="`${name} flag`"
@@ -70,18 +80,42 @@ onMounted(async () => {
       />
 
       <h1>{{ name }}</h1>
-    </header>
 
-    <div v-if="households > 0">
-      <span class="count"
+      <span v-if="households > 0" class="count"
         >{{ numberWithCommas(households) }} households will lose internet affordability in May
         2024</span
       >
+    </div>
+  </header>
 
+  <section id="content" class="wrapper">
+    <div v-if="households > 0">
       <h2>Senators</h2>
-      <ul>
+      <ul class="senators">
         <li v-for="senator in senators" v-bind:key="senator.id.govtrack">
           {{ senator.name.official_full }}
+          <button
+            class="contact-button"
+            v-bind:aria-label="`Contact ${senator.name.official_full}`"
+            v-on:click="openContact(senator.id.govtrack)"
+          ></button>
+
+          <div
+            v-if="visibleLegislatorContact === senator.id.govtrack"
+            class="modal"
+            v-on:click.self="openContact(0)"
+          >
+            <div class="surface">
+              <button class="close-button" aria-label="Close" v-on:click.self="openContact(0)">
+                x
+              </button>
+              <LegislatorCard
+                v-bind:id="senator.id.govtrack"
+                v-bind:name="senator.name.official_full"
+                v-bind:term="senator.terms[senator.terms.length - 1]"
+              />
+            </div>
+          </div>
         </li>
       </ul>
 
@@ -98,25 +132,55 @@ onMounted(async () => {
             <td>{{ representative.name.official_full }}</td>
             <td class="align-right">
               {{ numberWithCommas(representative.metrics.enrolledHouseholds) }}
+
+              <div
+                v-if="visibleLegislatorContact === representative.id.govtrack"
+                class="modal"
+                v-on:click.self="openContact(0)"
+              >
+                <div class="surface">
+                  <button class="close-button" aria-label="Close" v-on:click.self="openContact(0)">
+                    x
+                  </button>
+                  <LegislatorCard
+                    v-bind:id="representative.id.govtrack"
+                    v-bind:name="representative.name.official_full"
+                    v-bind:term="representative.terms[representative.terms.length - 1]"
+                  />
+                </div>
+              </div>
+              <button
+                class="contact-button"
+                v-bind:aria-label="`Contact ${representative.name.official_full}`"
+                v-on:click="openContact(representative.id.govtrack)"
+              ></button>
             </td>
           </tr>
         </tbody>
       </table>
     </div>
     <div v-else>Data coming soon</div>
-  </div>
+  </section>
 </template>
 
 <style scoped>
 header {
+  background-color: var(--color-accent);
+  color: #fff;
+  margin-top: -2rem;
+  padding: 2rem 0;
+}
+
+header .wrapper {
   align-items: center;
   display: flex;
-  margin-bottom: 1rem;
+  flex-wrap: wrap;
 }
 
 h1 {
-  font-size: 1.5rem;
-  font-weight: bold;
+  font-family: monospace;
+  font-size: 1rem;
+  font-weight: normal;
   margin-bottom: 0;
   text-transform: uppercase;
 }
@@ -124,11 +188,34 @@ h1 {
 .flag {
   box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.1);
   margin-right: 1rem;
-  width: 4rem;
+  width: 3rem;
 }
 
 .count {
   font-size: 2rem;
+  font-weight: bold;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+section#content {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.senators {
+  padding-left: 0.5rem;
+}
+
+.senators li {
+  list-style-type: none;
+  position: relative;
+  width: max-content;
+}
+
+.senators li:hover {
+  background-color: var(--color-accent);
+  color: #fff;
 }
 
 .align-right {
@@ -139,15 +226,92 @@ table {
   border-collapse: collapse;
 }
 
+tr {
+  position: relative;
+  transition: all 0.125s;
+}
+
+tr:hover {
+  background-color: var(--color-accent);
+  color: #fff;
+}
+
+th,
+td {
+  padding: 0.5rem 1rem;
+}
+
+th:first-child,
+td:first-child {
+  padding-left: 0.5rem;
+}
+
+th:last-child,
+td:last-child {
+  padding-right: 0.5rem;
+}
+
 th {
   border-bottom: 1px solid #aaa;
   font-weight: bold;
-  padding: 0.5rem 0;
   text-align: left;
 }
 
 td {
   border-bottom: 1px solid #ccc;
-  padding: 0.5rem 0;
+}
+
+.contact-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  inset: 0;
+  position: absolute;
+  width: 100%;
+}
+
+.modal {
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #000;
+  display: flex;
+  inset: 0;
+  justify-content: center;
+  position: fixed;
+  text-align: left;
+  z-index: 1;
+}
+
+.surface {
+  background-color: #fff;
+  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.25);
+  max-height: 100vh;
+  overflow-y: scroll;
+  padding: 2rem;
+  position: relative;
+  width: max-content;
+}
+
+.close-button {
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+  display: flex;
+  font-size: 2rem;
+  justify-content: center;
+  height: 2rem;
+  line-height: 1;
+  position: absolute;
+  right: 0.5rem;
+  top: 0.5rem;
+  transition: all 0.125s;
+  width: 2rem;
+}
+
+.close-button:hover {
+  background-color: var(--color-accent);
+  color: #fff;
 }
 </style>

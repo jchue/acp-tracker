@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import '~/assets/main.css'
 
-useHead({
+useSeoMeta({
   title: 'ACP Tracker',
 })
 </script>
@@ -31,6 +31,7 @@ header {
   padding: 1rem 0;
   position: sticky;
   top: 0;
+  z-index: 1;
 }
 
 header > div {
@@ -46,6 +47,10 @@ header > div {
   padding-right: 2rem;
 }
 
+.site-name:hover {
+  background-color: transparent
+}
+
 nav {
   align-items: center;
   display: flex;
@@ -58,6 +63,11 @@ nav a {
   display: inline-block;
   line-height: 1;
   padding: 0.25rem 0.5rem;
+}
+
+nav a:hover {
+  background-color: transparent;
+  border-bottom: 2px solid #000;
 }
 
 nav a.router-link-exact-active {

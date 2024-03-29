@@ -1,7 +1,7 @@
 [
   {
     "state": "MP",
-    "district": "al",
+    "district": 0,
     "enrolledHouseholds": 3153,
     "percentHouseholds": 0.2,
     "funding": 2316028

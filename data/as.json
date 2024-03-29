@@ -1,7 +1,7 @@
 [
   {
     "state": "AS",
-    "district": "al",
+    "district": 0,
     "enrolledHouseholds": 1658,
     "percentHouseholds": 0.1667,
     "funding": 1335936

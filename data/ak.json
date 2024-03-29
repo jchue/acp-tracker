@@ -1,7 +1,7 @@
 [
   {
     "state": "AK",
-    "district": "al",
+    "district": 0,
     "enrolledHouseholds": 24095,
     "percentHouseholds": 0.09,
     "funding": 21249907

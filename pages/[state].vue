@@ -90,70 +90,78 @@ function openContact(id: number | string) {
 
   <section class="wrapper py-8">
     <div v-if="households > 0">
-      <h2>Senators</h2>
-      <ul class="pl-2">
-        <li
-          v-for="senator in senators"
-          v-bind:key="senator.id.govtrack"
-          class="hover:bg-primary relative hover:text-white w-max"
-        >
-          {{ senator.name.official_full }}
-          <button
-            class="contact-button"
-            v-bind:aria-label="`Contact ${senator.name.official_full}`"
-            v-on:click="openContact(senator.id.govtrack)"
-          ></button>
-
-          <ContactModal
-            v-if="visibleLegislatorContact === senator.id.govtrack"
-            v-bind:id="senator.id.govtrack"
-            v-bind:name="senator.name.official_full"
-            v-bind:term="senator.terms[senator.terms.length - 1]"
-            v-on:close="openContact(0)"
-          />
-        </li>
-      </ul>
-
-      <h2>Representatives</h2>
-      <table>
-        <thead>
-          <th class="border-b border-gray-400 font-bold pl-2 pr-4 py-2 text-left">District</th>
-          <th class="border-b border-gray-400 font-bold px-4 py-2 text-left">Representative</th>
-          <th class="border-b border-gray-400 font-bold pl-4 pr-2 py-2 text-right">
-            Households At Risk
-          </th>
-        </thead>
-        <tbody>
-          <tr
-            v-for="representative in representatives"
-            v-bind:key="representative.id.govtrack"
-            class="hover:bg-primary relative hover:text-white transition-colors"
+      <section v-if="senators.length > 0">
+        <h2>Senators</h2>
+        <ul class="pl-2">
+          <li
+            v-for="senator in senators"
+            v-bind:key="senator.id.govtrack"
+            class="hover:bg-primary relative hover:text-white w-max"
           >
-            <td class="border-b border-gray-300 pl-2 pr-4 py-2">
-              {{ representative.terms[representative.terms.length - 1].district }}
-            </td>
-            <td class="border-b border-gray-300 px-4 py-2">
-              {{ representative.name.official_full }}
-            </td>
-            <td class="border-b border-gray-300 pl-4 pr-2 py-2 text-right">
-              {{ numberWithCommas(representative.metrics.enrolledHouseholds) }}
+            {{ senator.name.official_full }}
+            <button
+              class="absolute inset-0 w-full"
+              v-bind:aria-label="`Contact ${senator.name.official_full}`"
+              v-on:click="openContact(senator.id.govtrack)"
+            ></button>
 
-              <button
-                class="absolute inset-0 w-full"
-                v-bind:aria-label="`Contact ${representative.name.official_full}`"
-                v-on:click="openContact(representative.id.govtrack)"
-              ></button>
-              <ContactModal
-                v-if="visibleLegislatorContact === representative.id.govtrack"
-                v-bind:id="representative.id.govtrack"
-                v-bind:name="representative.name.official_full"
-                v-bind:term="representative.terms[representative.terms.length - 1]"
-                v-on:close="openContact(0)"
-              />
-            </td>
-          </tr>
-        </tbody>
-      </table>
+            <ContactModal
+              v-if="visibleLegislatorContact === senator.id.govtrack"
+              v-bind:id="senator.id.govtrack"
+              v-bind:name="senator.name.official_full"
+              v-bind:term="senator.terms[senator.terms.length - 1]"
+              v-on:close="openContact(0)"
+            />
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Representatives</h2>
+        <table>
+          <thead>
+            <th class="border-b border-gray-400 font-bold pl-2 pr-4 py-2 text-left">District</th>
+            <th class="border-b border-gray-400 font-bold px-4 py-2 text-left">Representative</th>
+            <th class="border-b border-gray-400 font-bold pl-4 pr-2 py-2 text-right">
+              Households At Risk
+            </th>
+          </thead>
+          <tbody>
+            <tr
+              v-for="representative in representatives"
+              v-bind:key="representative.id.govtrack"
+              class="hover:bg-primary relative hover:text-white transition-colors"
+            >
+              <td class="border-b border-gray-300 pl-2 pr-4 py-2">
+                {{
+                  representative.terms[representative.terms.length - 1].district === 0
+                    ? 'At-Large'
+                    : representative.terms[representative.terms.length - 1].district
+                }}
+              </td>
+              <td class="border-b border-gray-300 px-4 py-2">
+                {{ representative.name.official_full }}
+              </td>
+              <td class="border-b border-gray-300 pl-4 pr-2 py-2 text-right">
+                {{ numberWithCommas(representative.metrics.enrolledHouseholds) }}
+
+                <button
+                  class="absolute inset-0 w-full"
+                  v-bind:aria-label="`Contact ${representative.name.official_full}`"
+                  v-on:click="openContact(representative.id.govtrack)"
+                ></button>
+                <ContactModal
+                  v-if="visibleLegislatorContact === representative.id.govtrack"
+                  v-bind:id="representative.id.govtrack"
+                  v-bind:name="representative.name.official_full"
+                  v-bind:term="representative.terms[representative.terms.length - 1]"
+                  v-on:close="openContact(0)"
+                />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
     </div>
     <div v-else>Data coming soon</div>
   </section>

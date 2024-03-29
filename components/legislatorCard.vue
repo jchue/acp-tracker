@@ -44,7 +44,7 @@ instagram.value = socialPerson?.social.instagram
       </address>
     </div>
 
-    <div>
+    <div v-if="districtOffices && districtOffices.length > 0">
       <span class="block font-bold font-mono mb-4 text-sm uppercase">District Offices</span>
       <ul class="flex flex-col gap-4">
         <li v-for="districtOffice in districtOffices" v-bind:key="districtOffice.id">
@@ -62,16 +62,30 @@ instagram.value = socialPerson?.social.instagram
 
   <section>
     <span class="block font-bold font-mono mb-4 text-sm uppercase">Online</span>
-    <ul class="flex gap-4">
-      <li><a v-bind:href="website" target="_blank">Website</a></li>
-      <li v-if="facebook">
-        <a v-bind:href="`https://facebook.com/${facebook}`" target="_blank">Facebook</a>
+    <ul class="flex gap-4 text-sm">
+      <li v-if="website" class="flex items-center">
+        <a v-bind:href="website" target="_blank"
+          ><img src="~/assets/globe.svg" alt="Globe icon" class="inline-block mr-1 w-4" />
+          Website</a
+        >
       </li>
-      <li v-if="twitter">
-        <a v-bind:href="`https://twitter.com/${twitter}`" target="_blank">Twitter</a>
+      <li v-if="facebook" class="flex items-center">
+        <a v-bind:href="`https://facebook.com/${facebook}`" target="_blank"
+          ><img src="~/assets/facebook.svg" alt="Facebook icon" class="inline-block mr-1 w-4" />
+          Facebook</a
+        >
       </li>
-      <li v-if="instagram">
-        <a v-bind:href="`https://instagram.com/${instagram}`" target="_blank">Instagram</a>
+      <li v-if="twitter" class="flex items-center">
+        <a v-bind:href="`https://twitter.com/${twitter}`" target="_blank"
+          ><img src="~/assets/twitter.svg" alt="Twitter icon" class="inline-block mr-1 w-4" />
+          Twitter</a
+        >
+      </li>
+      <li v-if="instagram" class="flex items-center">
+        <a v-bind:href="`https://instagram.com/${instagram}`" target="_blank"
+          ><img src="~/assets/instagram.svg" alt="Instagram icon" class="inline-block mr-1 w-4" />
+          Instagram</a
+        >
       </li>
     </ul>
   </section>

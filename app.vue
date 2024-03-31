@@ -14,6 +14,7 @@ useSeoMeta({
       <nav class="flex items-center gap-2">
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
+        <RouterLink to="/current">Current Status</RouterLink>
       </nav>
     </div>
   </header>

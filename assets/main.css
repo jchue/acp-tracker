@@ -16,11 +16,6 @@ p {
   margin-bottom: 1rem;
 }
 
-ol,
-ul {
-  margin: 0 0 1rem;
-}
-
 #app {
   font-weight: normal;
 }

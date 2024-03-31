@@ -3,7 +3,6 @@ import districtOfficesPersons from '~/data/legislators-district-offices.json'
 import socialPersons from '~/data/legislators-social-media.json'
 
 const props = defineProps({
-  name: String,
   id: [Number, String],
   term: Object
 })
@@ -33,8 +32,6 @@ instagram.value = socialPerson?.social.instagram
 </script>
 
 <template>
-  <h1>{{ name }}</h1>
-
   <section class="flex gap-8 mb-4">
     <div>
       <span class="block font-bold font-mono mb-4 text-sm uppercase">DC Office</span>

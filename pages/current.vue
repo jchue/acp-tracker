@@ -45,9 +45,14 @@ const steps = [
   <div class="max-w-screen-lg mx-auto px-4">
     <h1>Where are we now?</h1>
 
-    <p>The <NuxtLink to="/about"><abbr title="Affordable Connectivity Program">ACP</abbr></NuxtLink> will expire at the end of April 2024 unless a bill to extend it is passed. Here is its current state in the legislative process:</p>
+    <p>
+      The
+      <NuxtLink to="/about"><abbr title="Affordable Connectivity Program">ACP</abbr></NuxtLink> will
+      expire at the end of April 2024 unless a bill to extend it is passed. Here is its current
+      state in the legislative process:
+    </p>
 
-    <ol class="mt-8">
+    <ol class="mt-8 relative z-0">
       <li v-for="(step, index) in steps" v-bind:key="step.title" class="relative">
         <div
           v-if="index < steps.length - 1 && step.complete"
@@ -79,6 +84,9 @@ const steps = [
       </li>
     </ol>
 
-    <p>To learn more about the legislative process, visit <a href="https://www.usa.gov/how-laws-are-made" target="_blank">USAGov</a>.</p>
+    <p>
+      To learn more about the legislative process, visit
+      <a href="https://www.usa.gov/how-laws-are-made" target="_blank">USAGov</a>.
+    </p>
   </div>
 </template>

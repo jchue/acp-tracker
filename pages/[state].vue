@@ -7,8 +7,6 @@ const representatives = ref<any>([])
 const senators = ref<any>([])
 const households = ref(0)
 
-const visibleLegislatorContact = ref()
-
 useSeoMeta({
   title: `${name} At-Risk Households`
 })
@@ -64,10 +62,6 @@ onMounted(async () => {
     /* empty */
   }
 })
-
-function openContact(id: number | string) {
-  visibleLegislatorContact.value = id
-}
 </script>
 
 <template>
@@ -92,26 +86,20 @@ function openContact(id: number | string) {
     <div v-if="households > 0">
       <section v-if="senators.length > 0">
         <h2>Senators</h2>
-        <ul class="pl-2">
+        <ul class="mb-4 pl-2">
           <li
             v-for="senator in senators"
             v-bind:key="senator.id.govtrack"
             class="hover:bg-primary relative hover:text-white w-max"
           >
             {{ senator.name.official_full }}
-            <button
-              class="absolute inset-0 w-full"
-              v-bind:aria-label="`Contact ${senator.name.official_full}`"
-              v-on:click="openContact(senator.id.govtrack)"
-            ></button>
 
-            <ContactModal
-              v-if="visibleLegislatorContact === senator.id.govtrack"
-              v-bind:id="senator.id.govtrack"
-              v-bind:name="senator.name.official_full"
-              v-bind:term="senator.terms[senator.terms.length - 1]"
-              v-on:close="openContact(0)"
-            />
+            <ContactModal v-bind:id="senator.id.govtrack"
+              ><button
+                class="absolute inset-0 w-full"
+                v-bind:aria-label="`Contact ${senator.name.official_full}`"
+              ></button
+            ></ContactModal>
           </li>
         </ul>
       </section>
@@ -145,18 +133,12 @@ function openContact(id: number | string) {
               <td class="border-b border-gray-300 pl-4 pr-2 py-2 text-right">
                 {{ numberWithCommas(representative.metrics.enrolledHouseholds) }}
 
-                <button
-                  class="absolute inset-0 w-full"
-                  v-bind:aria-label="`Contact ${representative.name.official_full}`"
-                  v-on:click="openContact(representative.id.govtrack)"
-                ></button>
-                <ContactModal
-                  v-if="visibleLegislatorContact === representative.id.govtrack"
-                  v-bind:id="representative.id.govtrack"
-                  v-bind:name="representative.name.official_full"
-                  v-bind:term="representative.terms[representative.terms.length - 1]"
-                  v-on:close="openContact(0)"
-                />
+                <ContactModal v-bind:id="representative.id.govtrack"
+                  ><button
+                    class="absolute inset-0 w-full"
+                    v-bind:aria-label="`Contact ${representative.name.official_full}`"
+                  ></button
+                ></ContactModal>
               </td>
             </tr>
           </tbody>

@@ -21,7 +21,7 @@ const term = legislator?.terms[legislator?.terms.length - 1]
         class="bg-[rgba(0,0,0,0.5)] fixed flex inset-0 items-center justify-center text-black text-left z-10"
       />
       <DialogContent
-        class="bg-white max-h-screen overflow-y-scroll p-8 shadow-lg w-max fixed top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] z-10"
+        class="bg-white max-h-screen max-w-full overflow-y-scroll p-8 shadow-lg w-max fixed top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] z-10"
       >
         <DialogTitle class="font-bold mb-4 text-3xl">{{ name }}</DialogTitle>
         <DialogDescription>

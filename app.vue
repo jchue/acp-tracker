@@ -7,9 +7,9 @@ useSeoMeta({
 </script>
 
 <template>
-  <header class="bg-white py-4 shadow-lg sticky top-0 z-10">
-    <div class="wrapper flex items-center">
-      <RouterLink to="/" class="hover:bg-transparent border-r border-black font-bold mr-8 pr-8 text-black hover:text-black">ACP Tracker</RouterLink>
+  <header class="bg-white pb-4 pt-2 sm:py-4 shadow-lg sticky top-0 z-10">
+    <div class="flex flex-wrap items-center max-w-7xl mx-auto px-4">
+      <RouterLink to="/" class="hover:bg-transparent sm:border-r border-black font-bold mr-8 pb-2 sm:pb-0 pr-8 text-black hover:text-black w-full sm:w-auto">ACP Tracker</RouterLink>
 
       <nav class="flex items-center gap-2">
         <RouterLink to="/">Home</RouterLink>

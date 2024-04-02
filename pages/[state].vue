@@ -75,7 +75,7 @@ onMounted(async () => {
 
       <h1 class="font-mono font-normal mb-0 text-base uppercase">{{ name }}</h1>
 
-      <span v-if="households > 0" class="font-bold mt-4 text-4xl w-full"
+      <span v-if="households > 0" class="font-bold mt-4 text-xl sm:text-2xl md:text-4xl w-full"
         >{{ numberWithCommas(households) }} households will lose internet affordability in May
         2024</span
       >
@@ -106,7 +106,7 @@ onMounted(async () => {
 
       <section>
         <h2>Representatives</h2>
-        <table>
+        <table class="text-sm sm:text-base">
           <thead>
             <th class="border-b border-gray-400 font-bold pl-2 pr-4 py-2 text-left">District</th>
             <th class="border-b border-gray-400 font-bold px-4 py-2 text-left">Representative</th>

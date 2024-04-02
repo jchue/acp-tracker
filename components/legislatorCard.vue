@@ -32,7 +32,7 @@ instagram.value = socialPerson?.social.instagram
 </script>
 
 <template>
-  <section class="flex gap-8 mb-4">
+  <section class="flex flex-col sm:flex-row gap-8 mb-4">
     <div>
       <span class="block font-bold font-mono mb-4 text-sm uppercase">DC Office</span>
       <address class="not-italic text-sm">
@@ -59,7 +59,7 @@ instagram.value = socialPerson?.social.instagram
 
   <section>
     <span class="block font-bold font-mono mb-4 text-sm uppercase">Online</span>
-    <ul class="flex gap-4 text-sm">
+    <ul class="flex flex-wrap gap-4 text-sm">
       <li v-if="website" class="flex items-center">
         <a v-bind:href="website" target="_blank"
           ><img src="~/assets/globe.svg" alt="Globe icon" class="inline-block mr-1 w-4" />

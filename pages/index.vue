@@ -20,7 +20,10 @@ const states = Object.entries(State)
       </div>
     </div>
   </section>
-  <section class="wrapper py-8 md:py-12 lg:py-16" id="states">
+  <section class="wrapper py-8 md:py-12 lg:py-16">
+    <AddressForm />
+  </section>
+  <section class="wrapper" id="states">
     <p>See the breakdown by state:</p>
 
     <ul class="sm:columns-2 md:columns-3">

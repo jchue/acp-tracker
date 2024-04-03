@@ -11,18 +11,6 @@ useSeoMeta({
   title: `${name} At-Risk Households`
 })
 
-function numberWithCommas(number: number) {
-  return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
-}
-
-interface Metrics {
-  state: string
-  district: number
-  enrolledHouseholds: number
-  percentHouseholds: number
-  funding: number
-}
-
 onMounted(async () => {
   try {
     const metricsDistricts: Metrics[] = (await import(`~/data/${route.params.state}.json`)).default
@@ -82,8 +70,8 @@ onMounted(async () => {
     </div>
   </header>
 
-  <section class="wrapper py-8">
-    <div v-if="households > 0">
+  <section class="wrapper flex py-8">
+    <div v-if="households > 0" class="flex-grow">
       <section v-if="senators.length > 0">
         <h2>Senators</h2>
         <ul class="mb-4 pl-2">
@@ -145,6 +133,8 @@ onMounted(async () => {
         </table>
       </section>
     </div>
-    <div v-else>Data coming soon</div>
+    <div v-else class="flex-grow">Data coming soon</div>
+
+    <AddressForm />
   </section>
 </template>

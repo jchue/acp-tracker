@@ -110,6 +110,18 @@ async function getStateMetrics(stateParam: string) {
           risk</span
         >
 
+        <p>Your representative is:</p>
+        <p v-if="representative">
+          <ContactModal v-bind:id="representative.id.govtrack"
+            ><button
+              v-bind:aria-label="`Contact ${representative.name.official_full}`"
+              class="hover:bg-primary cursor-pointer text-primary hover:text-white"
+            >
+              {{ representative.name.official_full }}
+            </button></ContactModal
+          >
+        </p>
+
         <p>Your senators are:</p>
 
         <ul class="mb-4">
@@ -124,18 +136,6 @@ async function getStateMetrics(stateParam: string) {
             >
           </li>
         </ul>
-
-        <p v-if="representative">
-          Your representative is:
-          <ContactModal v-bind:id="representative.id.govtrack"
-            ><button
-              v-bind:aria-label="`Contact ${representative.name.official_full}`"
-              class="hover:bg-primary cursor-pointer text-primary hover:text-white"
-            >
-              {{ representative.name.official_full }}
-            </button></ContactModal
-          >
-        </p>
       </div>
     </div>
   </div>

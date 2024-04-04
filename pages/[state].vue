@@ -70,7 +70,7 @@ onMounted(async () => {
     </div>
   </header>
 
-  <section class="wrapper flex py-8">
+  <section class="wrapper flex flex-col md:flex-row gap-8 py-8">
     <div v-if="households > 0" class="flex-grow">
       <section v-if="senators.length > 0">
         <h2>Senators</h2>

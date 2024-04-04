@@ -85,14 +85,21 @@ async function getStateMetrics(stateParam: string) {
   <div>
     <h2>Find your representatives</h2>
 
-    <form v-on:submit.prevent="findAddress">
-      <label for="address" class="block font-bold font-mono mb-1 text-sm uppercase">Address</label>
-      <input
-        id="address"
-        v-model="address"
-        type="text"
-        class="border-2 border-gray-300 font-mono min-w-96 mr-2 px-3 py-2 rounded-lg"
-      />
+    <form
+      class="flex flex-col sm:flex-row gap-2 items-start sm:items-end"
+      v-on:submit.prevent="findAddress"
+    >
+      <div class="self-stretch">
+        <label for="address" class="block font-bold font-mono mb-1 text-sm uppercase"
+          >Address</label
+        >
+        <input
+          id="address"
+          v-model="address"
+          type="text"
+          class="border-2 border-gray-300 font-mono min-w-64 md:min-w-72 lg:min-w-96 px-3 py-2 rounded-lg w-full"
+        />
+      </div>
 
       <ButtonCustom type="submit">Find</ButtonCustom>
     </form>

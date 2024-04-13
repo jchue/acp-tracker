@@ -80,14 +80,14 @@ onMounted(async () => {
             v-bind:key="senator.id.govtrack"
             class="hover:bg-primary relative hover:text-white w-max"
           >
-            {{ senator.name.official_full }}
-
             <ContactModal v-bind:id="senator.id.govtrack"
               ><button
-                class="absolute inset-0 w-full"
+                class="hover:bg-primary cursor-pointer text-primary hover:text-white"
                 v-bind:aria-label="`Contact ${senator.name.official_full}`"
-              ></button
-            ></ContactModal>
+              >
+                {{ senator.name.official_full }}
+              </button></ContactModal
+            >
           </li>
         </ul>
       </section>
@@ -103,11 +103,7 @@ onMounted(async () => {
             </th>
           </thead>
           <tbody>
-            <tr
-              v-for="representative in representatives"
-              v-bind:key="representative.id.govtrack"
-              class="hover:bg-primary relative hover:text-white transition-colors"
-            >
+            <tr v-for="representative in representatives" v-bind:key="representative.id.govtrack">
               <td class="border-b border-gray-300 pl-2 pr-4 py-2">
                 {{
                   representative.terms[representative.terms.length - 1].district === 0
@@ -116,17 +112,17 @@ onMounted(async () => {
                 }}
               </td>
               <td class="border-b border-gray-300 px-4 py-2">
-                {{ representative.name.official_full }}
+                <ContactModal v-bind:id="representative.id.govtrack"
+                  ><button
+                    class="hover:bg-primary cursor-pointer text-primary hover:text-white"
+                    v-bind:aria-label="`Contact ${representative.name.official_full}`"
+                  >
+                    {{ representative.name.official_full }}
+                  </button></ContactModal
+                >
               </td>
               <td class="border-b border-gray-300 pl-4 pr-2 py-2 text-right">
                 {{ numberWithCommas(representative.metrics.enrolledHouseholds) }}
-
-                <ContactModal v-bind:id="representative.id.govtrack"
-                  ><button
-                    class="absolute inset-0 w-full"
-                    v-bind:aria-label="`Contact ${representative.name.official_full}`"
-                  ></button
-                ></ContactModal>
               </td>
             </tr>
           </tbody>

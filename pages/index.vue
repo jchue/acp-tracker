@@ -42,7 +42,7 @@ const states = Object.entries(State)
   font-size: 1rem;
   font-weight: bold;
   line-height: 1;
-  padding: 0.5rem 0.75rem;
+  padding: 0.75rem 1rem;
 }
 
 .button:hover {
@@ -67,7 +67,6 @@ const states = Object.entries(State)
 @media (min-width: 640px) {
   .button {
     font-size: 1.125rem;
-    padding: 0.625rem 0.875rem;
   }
 }
 
